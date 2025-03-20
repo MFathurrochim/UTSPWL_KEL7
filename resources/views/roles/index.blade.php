@@ -4,8 +4,7 @@
     <div class="card-header">Manage Roles</div>
     <div class="card-body">
         @can('create-role')
-        <a href="{{ route('roles.create') }}" class="btn btn-success btn-sm my-2"><i class="bi bi-plus-circle"></i> Add New
-            Role</a>
+        <a href="{{ route('roles.create') }}" class="btn btn-success btn-sm my-2"><i class="bi bi-plus-circle"></i> Tambah Role baru</a>
         @endcan
         <table class="table table-striped table-bordered">
             <thead>
@@ -51,7 +50,7 @@
                 @empty
                 <td colspan="3">
                     <span class="text-danger">
-                        <strong>No Role Found!</strong>
+                        <strong>Role tidak ditemukan!</strong>
                     </span>
                 </td>
                 @endforelse
