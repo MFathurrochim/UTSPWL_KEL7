@@ -13,6 +13,7 @@ class Product extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'description'
+        'description',
+        'jumlah_stok'
     ];
 }

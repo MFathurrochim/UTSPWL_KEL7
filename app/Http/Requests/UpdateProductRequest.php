@@ -25,7 +25,8 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:250',
-            'description' => 'required|string'
+            'description' => 'required|string',
+            'jumlah_stok' => 'required|int'
         ];
     }
 }

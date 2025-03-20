@@ -10,7 +10,7 @@
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th scope="col">S#</th>
+                    <th scope="col">no</th>
                     <th scope="col">Name</th>
                     <th scope="col" style="width: 250px;">Action</th>
                 </tr>

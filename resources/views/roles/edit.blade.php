@@ -10,7 +10,7 @@
                 <div class="float-end">
 
 
-                    <a href="{{ route('roles.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('roles.index') }}" class="btn btn-primary btn-sm">&larr; Kembali</a>
                 </div>
             </div>
             <div class="card-body">

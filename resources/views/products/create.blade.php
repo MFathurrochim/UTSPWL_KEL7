@@ -9,12 +9,12 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    Add New Product===
+                    Tambah Produk
                 </div>
                 <div class="float-end">
 
 
-                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm">&larr; Kembali</a>
 
 
                 </div>
@@ -58,7 +58,7 @@
 
 
                                 <div class="col-md-7">
-                                    <textarea class="form-control @error('jumlah_stok') is-invalid @enderror" id="jumlah_stok" name="Jumlah_stok">{{ old('jumlah_stok') }}</textarea>
+                                    <textarea class="form-control @error('jumlah_stok') is-invalid @enderror" id="jumlah_stok" name="jumlah_stok">{{ old('jumlah_stok') }}</textarea>
                                     @if ($errors->has('jumlah_stok'))
                                     <span class="text-danger">{{ $errors->first('jumlah_stok') }}</span>
                                     @endif

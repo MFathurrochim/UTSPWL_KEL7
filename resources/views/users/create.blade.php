@@ -7,12 +7,12 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    Add New User
+                    Tambah User Baru
                 </div>
                 <div class="float-end">
 
 
-                    <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm">&larr; Kembali</a>
 
 
                 </div>
