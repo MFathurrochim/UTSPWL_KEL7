@@ -8,6 +8,12 @@
         @can('create-user')
         <a href="{{ route('users.create') }}" class="btn btn-success btn-sm my-2"><i class="bi bi-plus-circle"></i> Tambah User baru</a>
         @endcan
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
+
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>

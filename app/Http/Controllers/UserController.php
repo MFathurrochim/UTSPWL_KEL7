@@ -48,7 +48,7 @@ class UserController extends Controller
         $user = User::create($input);
         $user->assignRole($request->roles);
         return redirect()->route('users.index')
-            ->withSuccess('New user is added successfully.');
+            ->withSuccess('User baru berhasil ditambahkan.');
     }
     /**
      * Display the specified resource.
@@ -92,7 +92,7 @@ class UserController extends Controller
 
 
         return redirect()->back()
-            ->withSuccess('User is updated successfully.');
+            ->withSuccess('User berhasil diperbarui');
     }
     /**
      * Remove the specified resource from storage.
@@ -106,6 +106,6 @@ class UserController extends Controller
         $user->syncRoles([]);
         $user->delete();
         return redirect()->route('users.index')
-            ->withSuccess('User is deleted successfully.');
+            ->withSuccess('User berhasil dihapus.');
     }
 }
