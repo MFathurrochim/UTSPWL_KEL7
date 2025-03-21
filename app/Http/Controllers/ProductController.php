@@ -47,7 +47,7 @@ class ProductController extends Controller
     {
         Product::create($request->all());
         return redirect()->route('products.index')
-            ->withSuccess('New product is added successfully.');
+            ->withSuccess('Produk baru berhasil ditambahkan.');
     }
     /**
      * Display the specified resource.
@@ -74,7 +74,7 @@ class ProductController extends Controller
     {
         $product->update($request->all());
         return redirect()->back()
-            ->withSuccess('Product is updated successfully.');
+            ->withSuccess('Produk telah berhasil di perbarui.');
     }
     /**
      * Remove the specified resource from storage.
@@ -83,6 +83,6 @@ class ProductController extends Controller
     {
         $product->delete();
         return redirect()->route('products.index')
-            ->withSuccess('Product is deleted successfully.');
+            ->withSuccess('Produk telah berhasil dihapus.');
     }
 }
