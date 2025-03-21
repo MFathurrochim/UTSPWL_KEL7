@@ -7,8 +7,12 @@
         @can('create-product')
         <a href="{{ route('products.create') }}" class="btn btn-success btn-sm my-2"><i class="bi bi-plus-circle"></i> Tambah Produk</a>
         @endcan
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
 
-        <!-- Scrollable table container -->
         <div class="table-container" style="max-height: 500px; overflow-y: auto; border: 1px solid #dee2e6; border-radius: 4px;">
             <table class="table table-striped table-bordered mb-0">
                 <thead>
