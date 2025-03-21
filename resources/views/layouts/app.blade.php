@@ -345,7 +345,7 @@
         <footer>
             <div class="container">
                 <p>Back to Page: <a href="{{ url('/') }}"><strong>Halaman Utama</strong></a></p>
-                <p>© {{ date('Y') }} <a href="#"><strong>Kelompok 7</strong></a>. All Rights Reserved.</p>
+                <p>© {{ date('Y') }} <a href="#"><strong>Kelompok 7</strong></a>Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.</p>
             </div>
         </footer>
     </div>
