@@ -1,15 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers;
-
 
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-
 
 class ProductController extends Controller
 {
@@ -30,7 +27,7 @@ class ProductController extends Controller
     public function index(): View
     {
         return view('products.index', [
-            'products' => Product::latest()->paginate(3)
+            'products' => Product::latest()->get() // Ubah dari paginate(3) menjadi get()
         ]);
     }
     /**
