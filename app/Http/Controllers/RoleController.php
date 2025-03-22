@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Http\Controllers;
-
 
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
@@ -10,8 +8,7 @@ use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-use DB;
-
+use Illuminate\Support\Facades\DB;
 
 class RoleController extends Controller
 {
@@ -23,6 +20,7 @@ class RoleController extends Controller
         $this->middleware('permission:edit-role', ['only' => ['edit', 'update']]);
         $this->middleware('permission:delete-role', ['only' => ['destroy']]);
     }
+
     /**
      * Display a listing of the resource.
      */
@@ -32,6 +30,7 @@ class RoleController extends Controller
             'roles' => Role::orderBy('id', 'DESC')->paginate(8)
         ]);
     }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -41,6 +40,7 @@ class RoleController extends Controller
             'permissions' => Permission::get()
         ]);
     }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -52,6 +52,7 @@ class RoleController extends Controller
         return redirect()->route('roles.index')
             ->withSuccess('New role is added successfully.');
     }
+
     /**
      * Display the specified resource.
      */
@@ -66,6 +67,7 @@ class RoleController extends Controller
             'rolePermissions' => $rolePermissions
         ]);
     }
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -74,15 +76,19 @@ class RoleController extends Controller
         if ($role->name == 'Super Admin') {
             abort(403, 'SUPER ADMIN ROLE CAN NOT BE EDITED');
         }
-        $rolePermissions = DB::table("role_has_permissions")->where("role_id", $role->id)
+
+        $rolePermissions = DB::table("role_has_permissions")
+            ->where("role_id", $role->id)
             ->pluck('permission_id')
             ->all();
+
         return view('roles.edit', [
             'role' => $role,
             'permissions' => Permission::get(),
             'rolePermissions' => $rolePermissions
         ]);
     }
+
     /**
      * Update the specified resource in storage.
      */
@@ -95,6 +101,7 @@ class RoleController extends Controller
         return redirect()->back()
             ->withSuccess('Role is updated successfully.');
     }
+
     /**
      * Remove the specified resource from storage.
      */
