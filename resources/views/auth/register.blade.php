@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Sistem Manajemen Inventaris</title>
+    <title>Register - Sistem Manajemen Inventory</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -254,7 +254,7 @@
             <div class="bg-image"></div>
         </div>
 
-        <h2 class="page-title">Sistem Informasi Manajemen Inventaris Barang</h2>
+        <h2 class="page-title">Sistem Informasi Manajemen Inventory</h2>
 
         <div class="container">
             <div class="row justify-content-center">
@@ -262,7 +262,7 @@
                     <div class="login-card">
                         <div class="login-card-header">
                             <h2>Register</h2>
-                            <p>Daftar ke Sistem Manajemen Inventaris</p>
+                            <p>Daftar ke Sistem Manajemen Inventory</p>
                         </div>
 
                         <div class="login-card-body">
@@ -355,7 +355,7 @@
                     <p class="mb-0">Back to Page: <a href="Halaman Utama">Halaman Utama</a></p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">© 2025| Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.</p>
+                    <p class="mb-0">© 2025 | M.Fathurrochim | Vivi Erlina | Nawrah Chyntia.</p>
                 </div>
             </div>
         </div>

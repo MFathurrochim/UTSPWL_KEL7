@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Sistem Manajemen Inventaris</title>
-    <!-- Bootstrap CSS -->
+    <title>Login - Sistem Manajemen Inventory</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         html,
@@ -22,7 +20,7 @@
             flex-direction: column;
         }
 
-        /* Header styles */
+
         .site-header {
             background-color: #dc0a2d;
             color: white;
@@ -37,7 +35,6 @@
             font-weight: 500;
         }
 
-        /* Main content area */
         .main-content {
             flex: 1;
             position: relative;
@@ -48,7 +45,6 @@
             padding: 20px 0;
         }
 
-        /* Background image overlay */
         .bg-image-container {
             position: absolute;
             top: 0;
@@ -65,11 +61,9 @@
             background-size: cover;
             background-position: center;
             filter: brightness(0.4);
-            /* Membuat gambar lebih gelap */
             z-index: -1;
         }
 
-        /* Login card */
         .login-card {
             background-color: white;
             border-radius: 10px;
@@ -164,7 +158,6 @@
             text-decoration: underline;
         }
 
-        /* Page title */
         .page-title {
             color: white;
             text-align: center;
@@ -174,7 +167,6 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Footer styles */
         .site-footer {
             background-color: #212529;
             color: #ffffff;
@@ -199,7 +191,7 @@
     <header class="site-header">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
-                <h1 class="h5 mb-0">Sistem Manajemen Inventaris</h1>
+                <h1 class="h5 mb-0">Sistem Manajemen Inventory</h1>
                 <div>
                     <a href="{{ route('login') }}" class="auth-link">Login</a>
                     <a href="{{ route('register') }}" class="auth-link">Register</a>
@@ -240,7 +232,7 @@
             <div class="bg-image"></div>
         </div>
 
-        <h2 class="page-title">Sistem Informasi Manajemen Inventaris Barang</h2>
+        <h2 class="page-title">Sistem Informasi Manajemen Inventory </h2>
 
         <div class="container">
             <div class="row justify-content-center">
@@ -248,7 +240,7 @@
                     <div class="login-card">
                         <div class="login-card-header">
                             <h2>{{ __('Login') }}</h2>
-                            <p>Masuk ke Sistem Manajemen Inventaris</p>
+                            <p>Masuk ke Sistem Manajemen Inventory</p>
                         </div>
 
                         <div class="login-card-body">
@@ -329,7 +321,7 @@
                     <p class="mb-0">Back to Page: <a href="Halaman Utama">Halaman Utama</a></p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">© 2025| Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.</p>
+                    <p class="mb-0"> © 2025| M.Fathurrochim | Vivi Erlina | Nawrah Chyntia</p>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Sistem Manajemen Inventaris</title>
+    <title>Sistem Manajemen Inventory</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -284,7 +284,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('home') }}">Sistem Manajemen Inventaris</a>
+                <a class="navbar-brand" href="{{ url('home') }}">Sistem Manajemen Inventory</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -309,7 +309,7 @@
                         @endcanany
 
                         @canany(['create-product', 'edit-product', 'delete-product'])
-                        <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">Manage Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">Manage Produk</a></li>
                         @endcanany
 
                         <li class="nav-item dropdown">
