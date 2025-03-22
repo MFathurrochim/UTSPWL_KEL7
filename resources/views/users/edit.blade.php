@@ -29,7 +29,7 @@
 
 
                     <div class="mb-3 row">
-                        <label for="name" class="col-md-4 col-form-label text-md-end text-start">Name</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-end text-start">Nama</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control @error('name') is-invalid @enderror"
                                 id="name" name="name" value="{{ $user->name }}">
@@ -41,8 +41,7 @@
 
 
                     <div class="mb-3 row">
-                        <label for="email" class="col-md-4 col-form-label text-md-end text-start">Email
-                            Address</label>
+                        <label for="email" class="col-md-4 col-form-label text-md-end text-start">Email</label>
                         <div class="col-md-6">
                             <input type="email" class="form-control @error('email') is-invalid @enderror"
                                 id="email" name="email" value="{{ $user->email }}">

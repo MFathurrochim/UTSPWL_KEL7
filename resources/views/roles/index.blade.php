@@ -10,7 +10,7 @@
             <thead>
                 <tr>
                     <th scope="col">no</th>
-                    <th scope="col">Name</th>
+                    <th scope="col">Nama</th>
                     <th scope="col" style="width: 250px;">Action</th>
                 </tr>
             </thead>

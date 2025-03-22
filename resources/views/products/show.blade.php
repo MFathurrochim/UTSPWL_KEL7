@@ -16,7 +16,7 @@
                 <div class="float-end">
 
 
-                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm">&larr; Kembali</a>
 
 
                 </div>
@@ -26,7 +26,7 @@
 
                 <div class="row">
                     <label for="name"
-                        class="col-md-4 col-form-label text-md-end text-start"><strong>Name:</strong></label>
+                        class="col-md-4 col-form-label text-md-end text-start"><strong>Nama:</strong></label>
                     <div class="col-md-6" style="line-height: 35px;">
                         {{ $product->name }}
                     </div>
@@ -37,7 +37,7 @@
 
 
                     <label for="description"
-                        class="col-md-4 col-form-label text-md-end text-start"><strong>Description:</strong></label>
+                        class="col-md-4 col-form-label text-md-end text-start"><strong>Deskripsi:</strong></label>
 
 
                     <div class="col-md-6" style="line-height: 35px;">

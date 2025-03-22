@@ -17,20 +17,19 @@
                     @endif
 
 
-                    {{ __('You are logged in!') }}
+                    {{ __('kamu berhasil masuk!') }}
 
 
-                    <p>This is your application dashboard.</p>
+                    <p>Selamat datang Di dashboard Aplikasi.</p>
                     @canany(['create-role', 'edit-role', 'delete-role'])
                     <a class="btn btn-primary" href="{{ route('roles.index') }}">
 
 
-                        <i class="bi bi-person-fill-gear"></i> Manage
-                        Roles</a>
+                        <i class="bi bi-person-fill-gear"></i> Kelola Roles</a>
                     @endcanany
                     @canany(['create-user', 'edit-user', 'delete-user'])
                     <a class="btn btn-success" href="{{ route('users.index') }}">
-                        <i class="bi bi-people"></i> Manage Users</a>
+                        <i class="bi bi-people"></i> Kelola Users</a>
                     @endcanany
 
 
@@ -41,7 +40,7 @@
                     product',
                     ])
                     <a class="btn btn-warning" href="{{ route('products.index') }}">
-                        <i class="bi bi-bag"></i> Manage Products</a>
+                        <i class="bi bi-bag"></i> Kelola Produk</a>
                     @endcanany
                     <p>&nbsp;</p>
                 </div>

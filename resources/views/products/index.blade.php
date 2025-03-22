@@ -18,10 +18,10 @@
                 <thead>
                     <tr>
                         <th scope="col" style="width: 5%; position: sticky; top: 0; background-color: white; z-index: 10;">No</th>
-                        <th scope="col" style="width: 20%; position: sticky; top: 0; background-color: white; z-index: 10;">Name</th>
-                        <th scope="col" style="width: 30%; position: sticky; top: 0; background-color: white; z-index: 10;">Description</th>
+                        <th scope="col" style="width: 20%; position: sticky; top: 0; background-color: white; z-index: 10;">Nama</th>
+                        <th scope="col" style="width: 30%; position: sticky; top: 0; background-color: white; z-index: 10;">Deskripsi</th>
                         <th scope="col" style="width: 15%; position: sticky; top: 0; background-color: white; z-index: 10;">Jumlah Stok</th>
-                        <th scope="col" style="width: 30%; position: sticky; top: 0; background-color: white; z-index: 10;">Action</th>
+                        <th scope="col" style="width: 30%; position: sticky; top: 0; background-color: white; z-index: 10;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

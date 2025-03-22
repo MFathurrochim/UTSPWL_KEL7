@@ -301,15 +301,15 @@
                         @endif
                         @else
                         @canany(['create-role', 'edit-role', 'delete-role'])
-                        <li class="nav-item"><a class="nav-link" href="{{ route('roles.index') }}">Manage Roles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('roles.index') }}">Kelola Roles</a></li>
                         @endcanany
 
                         @canany(['create-user', 'edit-user', 'delete-user'])
-                        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">Kelola Users</a></li>
                         @endcanany
 
                         @canany(['create-product', 'edit-product', 'delete-product'])
-                        <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">Manage Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">Kelola Produk</a></li>
                         @endcanany
 
                         <li class="nav-item dropdown">
@@ -336,7 +336,7 @@
         <!-- Main Content -->
         <main class="py-4">
             <div class="container">
-                <h3 class="text-center mt-3 mb-3">Sistem Informasi Manajemen Inventaris Barang</h3>
+                <h3 class="text-center mt-3 mb-3">Sistem Informasi Manajemen Inventory Produk</h3>
                 @yield('content')
             </div>
         </main>
@@ -345,7 +345,7 @@
         <footer>
             <div class="container">
                 <p>Back to Page: <a href="{{ url('/') }}"><strong>Halaman Utama</strong></a></p>
-                <p>© {{ date('Y') }} <a href="#"><strong>Kelompok 7</strong></a>Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.</p>
+                <p>© {{ date('Y') }} <a href="#"><strong>Kelompok 7</strong></a> Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.</p>
             </div>
         </footer>
     </div>

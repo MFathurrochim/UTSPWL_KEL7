@@ -23,7 +23,7 @@
                     @method('PUT')
 
                     <div class="mb-3 row">
-                        <label for="name" class="col-md-4 col-form-label text-md-end text-start">Name</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-end text-start">Nama</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control @error('name') is-invalid @enderror"
                                 id="name" name="name" value="{{ $product->name }}">
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="description" class="col-md-4 col-form-label text-md-end text-start">Description</label>
+                        <label for="description" class="col-md-4 col-form-label text-md-end text-start">Deskripsi</label>
                         <div class="col-md-6">
                             <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description">{{ $product->description }}</textarea>
                             @if ($errors->has('description'))
