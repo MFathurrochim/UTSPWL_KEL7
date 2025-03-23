@@ -33,28 +33,53 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            background-image: url('https://garuda.industry.co.id/uploads/berita/detail/49702.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
 
-        /* Navbar Styling */
+        main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(75, 64, 64, 0.85);
+            z-index: 0;
+        }
+
+        main .container {
+            position: relative;
+            z-index: 1;
+        }
+
+
         .navbar {
             background-color: #d90429;
-            padding: 15px 0;
+            padding: 8px 0;
+            /* Reduced padding for a more compact navbar */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
             color: white !important;
-            font-size: 22px;
+            font-size: 20px;
+            /* Slightly smaller font */
             font-weight: 800;
             letter-spacing: 0.5px;
         }
 
         .nav-link {
             color: white !important;
-            font-size: 16px;
+            font-size: 14px;
+            /* Smaller font size */
             font-weight: 600;
-            padding: 8px 15px !important;
-            margin: 0 5px;
+            padding: 4px 12px !important;
+            /* Reduced padding */
+            margin: 0 3px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
@@ -62,6 +87,33 @@
         .nav-link:hover {
             color: #ffb703 !important;
             background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Profile Image in Navbar */
+        .profile-image {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            border-color: #ffb703;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+            /* Remove dropdown arrow */
         }
 
         /* Footer Styling */
@@ -276,12 +328,16 @@
             color: #ffdd00;
             text-decoration: underline;
         }
+
+        main h3 {
+            color: white;
+        }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <!-- Navbar -->
+        <!-- Navbar - Compact Version with Profile Image -->
         <nav class="navbar navbar-expand-md shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">Sistem Manajemen Inventory</a>
@@ -314,13 +370,19 @@
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">
-                                {{ Auth::user()->name }}
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="profile-image">
+                                    <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}&background=random" alt="Profile">
+                                </div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end">
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-item text-center fw-bold mb-2">
+                                    {{ Auth::user()->name }}
+                                </div>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Logout
+                                    <i class="bi bi-box-arrow-right me-2"></i>Logout
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
@@ -344,8 +406,14 @@
         <!-- Footer -->
         <footer>
             <div class="container">
-                <p>Back to Page: <a href="{{ url('/') }}"><strong>Halaman Utama</strong></a></p>
-                <p>© {{ date('Y') }} <a href="#"><strong>Kelompok 7</strong></a> Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.</p>
+                <div class="d-flex justify-content-between align-items-center py-2">
+                    <div>
+                        <p>Kembali ke : <a href="{{ url('/') }}"><strong>Halaman Awal</strong></a></p>
+                    </div>
+                    <div class="text-end">
+                        © {{ date('Y') }} <a href="#"><strong>Kelompok 7</strong></a> Nawrah Chyntia | Vivi Erlina | M.Fathurrochim.
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
