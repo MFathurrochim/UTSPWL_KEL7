@@ -318,7 +318,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0">Back to Page: <a href="Halaman Utama">Halaman Utama</a></p>
+                    <p>Kembali ke : <a href="{{ url('/') }}"><strong>Halaman Awal</strong></a></p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0"> © 2025| M.Fathurrochim | Vivi Erlina | Nawrah Chyntia</p>
@@ -326,6 +326,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
