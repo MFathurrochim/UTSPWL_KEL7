@@ -25,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $role = Auth::user()->roles->first();
-        return view('home', compact('role'));
+        $user = Auth::user(); // Ambil pengguna yang login
+        $role = $user->roles->first(); // Ambil role pertama yang dimiliki
+        $rolePermissions = $role ? $role->permissions : collect(); // Ambil permissions jika role ada
+
+        return view('home', compact('user', 'role', 'rolePermissions'));
     }
 }
