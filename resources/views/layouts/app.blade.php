@@ -331,6 +331,21 @@
 
         main h3 {
             color: white;
+            animation: gerak 3s infinite;
+        }
+
+        @keyframes gerak {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(20px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
