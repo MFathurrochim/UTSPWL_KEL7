@@ -352,10 +352,15 @@
 
 <body>
     <div id="app">
-        <!-- Navbar - Compact Version with Profile Image -->
+
         <nav class="navbar navbar-expand-md shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('home') }}">Sistem Manajemen Inventory</a>
+                <a class="navbar-brand d-flex align-items-center">
+                    <img src="https://icon-library.com/images/inventory-icon-png/inventory-icon-png-3.jpg"
+                        alt="Logo" style="width: 40px; height: 40px; margin-right: 15px;">
+                    Sistem Manajemen Inventory
+                </a>
+
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -371,6 +376,8 @@
                         <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                         @endif
                         @else
+                        <li class="nav-item"><a class="nav-link" href="{{ url('home') }}">Dashboard</a></li>
+
                         @canany(['create-role', 'edit-role', 'delete-role'])
                         <li class="nav-item"><a class="nav-link" href="{{ route('roles.index') }}">Kelola Roles</a></li>
                         @endcanany
@@ -387,7 +394,7 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="profile-image">
-                                    <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}&background=random" alt="Profile">
+                                    <img src="https://ui-avatars.com/api/?name={{ urlencode(substr(Auth::user()->name, 0, 5)) }}&background=random" alt="Profile">
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
