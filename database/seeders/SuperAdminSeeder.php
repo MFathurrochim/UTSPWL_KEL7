@@ -21,21 +21,21 @@ class SuperAdminSeeder extends Seeder
     {
         // Creating Super Admin User
         $superAdmin = User::create([
-            'name' => 'Rivo',
+            'name' => 'Fathur Rochim',
             'email' => 'superadmin@roles.id',
             'password' => Hash::make('123456')
         ]);
         $superAdmin->assignRole('Super Admin');
         // Creating Admin User
         $admin = User::create([
-            'name' => 'Meri',
+            'name' => 'Vivi Erlina',
             'email' => 'admin@roles.id',
             'password' => Hash::make('123456')
         ]);
         $admin->assignRole('Admin');
         // Creating Product Manager User
         $productManager = User::create([
-            'name' => 'Fahri',
+            'name' => 'Nawrah Chyntia',
             'email' => 'operator@roles.id',
             'password' => Hash::make('123456')
         ]);
