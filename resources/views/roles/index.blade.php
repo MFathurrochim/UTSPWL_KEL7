@@ -1,8 +1,17 @@
 @extends('layouts.app')
 @section('content')
 <div class="card">
-    <div class="card-header">Manage Roles</div>
+    <div class="card-header">Kelola</div>
     <div class="card-body">
+        @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
+
+
         @can('create-role')
         <a href="{{ route('roles.create') }}" class="btn btn-success btn-sm my-2"><i class="bi bi-plus-circle"></i> Tambah Role baru</a>
         @endcan

@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    Add New Role
+                    Tambah Role Baru
                 </div>
                 <div class="float-end">
 

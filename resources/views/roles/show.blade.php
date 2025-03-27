@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    Role Information
+                    Informasi Role
                 </div>
                 <div class="float-end">
 

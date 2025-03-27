@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card">
-    <div class="card-header">Daftar Produk</div>
+    <div class="card-header">Kelola Produk</div>
     <div class="card-body">
         @can('create-product')
         <a href="{{ route('products.create') }}" class="btn btn-success btn-sm my-2"><i class="bi bi-plus-circle"></i> Tambah Produk</a>

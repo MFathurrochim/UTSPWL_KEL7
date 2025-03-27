@@ -58,10 +58,13 @@
 
 
                                 <div class="col-md-7">
-                                    <textarea class="form-control @error('jumlah_stok') is-invalid @enderror" id="jumlah_stok" name="jumlah_stok">{{ old('jumlah_stok') }}</textarea>
-                                    @if ($errors->has('jumlah_stok'))
-                                    <span class="text-danger">{{ $errors->first('jumlah_stok') }}</span>
-                                    @endif
+                                    <input type="number"
+                                        class="form-control form-control-sm"
+                                        id="jumlah_stok"
+                                        name="jumlah_stok"
+                                        value="{{ old('jumlah_stok') }}"
+                                        min="0"
+                                        style="width: 100px;">
                                 </div>
                             </div>
 
